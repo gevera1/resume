@@ -1,0 +1,132 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{fontawesome}
+\usepackage[T1]{fontenc}
+\usepackage[margin=.5in]{geometry}
+
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{\uppercase}[\titlerule]
+
+\titleformat{\subsection}[runin]
+{\bfseries\large}
+{\hspace{.1em}}
+{0em}
+{}[ -- ]
+
+\titleformat{\subsubsection}
+{\bfseries}
+{}
+{0em}
+{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+\renewcommand{\maketitle}{
+    \begin{center}
+        {
+            \Huge\bfseries\theauthor
+        }
+        \vspace{.5em}
+
+        {
+            {\faicon{envelope} \href{mailto:gevero.adrianjames@gmail.com}{gevero.adrianjames@gmail.com}} \enspace {\faicon{phone-square} (516) 587-0694} \enspace {\faicon{github} \href{https://github.com/gevera1}{\texttt{gevera1}}}
+        }
+
+    \end{center}
+}
+
+\title{Resume}
+\author{Adrian-James Gevero}
+
+\titlespacing*{\section}
+{0pt}{2.0ex}{2.0ex}
+
+\titlespacing*{\subsection}
+{0pt}{.75ex}{.75ex}
+
+\begin{document}
+\thispagestyle{empty}
+
+\maketitle
+
+\section{Technical Skills}
+%\begin{multicols}{2}
+\subsection{Languages} 
+\textbf{C, C++, Assembly (ARM/x86), BASH, Python, \LaTeX}, OpenMP, VHDL, OpenGL, Java
+
+\subsection{Other}
+\hangindent=.25in
+\textbf{Linux Command Line, Vim, Git, Perforce, Trace32, GNU Debugger}, STM32CubeIDE, Xilinx Vivado, Docker, Dr. Memory, GNU Make, FreeRTOS, Wireshark, Ghidra, JIRA/Confluence, Microsoft Office 
+%\end{multicols}
+
+\section{Publications}
+A Gevero, D Rutishauser. \textbf{Flash Memory Scrubbing Application for Boot File Preservation of NASA's Descent and Landing Computer}. (GN\&C Technology VII - Velocimeters) \textit{AIAA SciTech Forum}. 2022; San Diego, CA. DOI: \url{https://doi.org/10.2514/6.2022-1833}
+
+\section{Experience}
+\subsection{Embedded Software Engineer}{\bf Qualcomm Technologies $\mid$ San Diego, CA} \hfill {07/2022 -- Present}\\
+\vspace{-.2in}
+\begin{itemize}
+    \itemsep-.2em
+    \item Designed and developed firmware device drivers, in C, as part of the Core SoC Infrastructure team.
+    \item Utilized Lauterbach Trace32 to perform JTAG debugging of software images flashed onto silicon.
+    \item Supported debugging efforts for internal device drivers, such as GPIO interrupts, Clocks, HWIO, etc.
+    \item Performed unit testing on device drivers to ensure robust functionality, while coordinating additional testing with the Core Platform Testing (CPT) team.
+    \item Developed and provided Board Support Package (BSP) firmware for numerous hardware targets.
+    \item Employed Perforce, Git and Docker to interface with codebase, maintain version control, and utilize CI/CD.
+\end{itemize}
+
+\subsection{Software Engineer Intern}{\bf NASA Johnson Space Center $\mid$ Houston, TX} \hfill {01/2021 -- 09/2021}\\
+\vspace{-.2in}
+\begin{itemize}
+    \itemsep-.2em
+    \item Conducted research on Error correction codes (ECC) and memory scrubbing methodologies.
+    \item Supported NASA's Safe and Precise Landing - Integrated Capabilities Evolution (SPLICE) Project through contributions to the Descent and Landing Computer (DLC).
+    \item Designed and implemented C application for flash memory scrubbing on the DLC.
+    \item Leveraged the Xilinx Vivado Design Suite to interface with the QSPI NOR flash, Timer, and MicroBlaze soft processor.
+    \item Conducted rigorous unit testing on application to ensure its ability to detect and correct soft-errors in memory. 
+    \item Investigated potential of parallelizing and vectorizing SPLICE algorithms using OpenMP and gcc optimizations.
+    \item Developed Python and BASH scripts to automate compilation and perform batch tests with varied input data.
+    \item Quantified runtime, context switch, cache miss, and other performance metrics; Compiled graphs into presentations to team members.
+    \item Authored documentation and research related to flash memory scrubbing application; Published findings to the Journal of Guidance, Navigation, and Control.
+    \item Presented technical paper at the 2022 AIAA SciTech Forum in San Diego, CA.
+\end{itemize}
+
+\section{Honors}
+\vspace{-.2in}
+\begin{multicols}{2}
+    \begin{itemize}
+    \itemsep-.2em
+        \item 2022 AIAA SciTech Technical Paper Presenter
+        \item RIT Computing Medalist
+        \item Dean's Honor List
+        \item IEEE-Eta Kappa Nu (ECSE Honor Society)
+        \item Order of the Engineer
+        \item Leadership Award, RPI
+    \end{itemize}
+\end{multicols}
+
+\section{Education}
+\subsection{B.S. in Computer and Systems Engineering}{Rensselaer Polytechnic Institute \hfill 09/2018 -- 05/2022}
+\vspace{-.05in}
+\begin{tabbing}
+    \hspace{3em} \textbf{GPA:}\hspace{4em} \= \textbf{3.42/4.00} \\
+    \hspace{3em} \textbf{Clubs:} \> \textbf{Rensselaer Electric Vehicle}, Embedded Hardware Club, Engineers Without Borders
+\end{tabbing}
+
+\end{document}
